@@ -1,15 +1,17 @@
 GET http://localhost:5000/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsInVzZXJuYW1lIjoiam9obmRvZSIsImVtYWlsIjoiMTIzIiwiaWF0IjoxNzQ3ODE5NjIyLCJleHAiOjE3NDc4MTk2NDJ9.XMyTzs3zQaScQiM-5t_OjAhtFe6k1VFlerO7DeAb9Mg
 
 ###
 GET http://localhost:5000/notes/1
 
 ###
-POST http://localhost:5000/add-note
+POST http://localhost:5000/notes
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsInVzZXJuYW1lIjoiam9obmRvZSIsImVtYWlsIjoiMTIzIiwiaWF0IjoxNzQ3ODIwOTQ3LCJleHAiOjE3NDc4MjA5NjJ9.kh4G14BVqZcQAhVZw2l-iic1KVqF36j5vUqft2a84eo
 
 {
-    "nama": "John Doe",
-    "catatan": "john@gmail.com"
+    "judul": "John Doe",
+    "konten": "john@gmail.com"
 }
 
 ###
@@ -23,3 +25,33 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/notes/2
+
+###
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiam9obmRvZSIsImVtYWlsIjoiMTIzIiwiaWF0IjoxNzQ3NDczNzkwLCJleHAiOjE3NDc0NzM4MTB9.XpeqFQeam7ELHVYhxHcJ-CuNvsKhEugZP4BD8EpIvRI
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "username": "johndoe",
+    "email": "123",
+    "password": "password123",
+    "confPassword": "password123"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "123",
+    "password": "password123"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout

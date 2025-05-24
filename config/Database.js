@@ -1,10 +1,17 @@
 import { Sequelize } from "sequelize";
+import dotenv from "dotenv";
 
-// Nyambungin db ke BE
-const db = new Sequelize("notes", "afifah", "123456", {
-  host: "34.50.72.116",
-  dialect: "mysql",
-});
+dotenv.config();
+
+const db = new Sequelize(
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
+    {
+        host: process.env.DB_HOST,
+        dialect: "mysql"
+    }
+);
 
 export default db;
 

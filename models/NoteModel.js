@@ -1,12 +1,18 @@
-import { Sequelize } from "sequelize";
+import { Sequelize, DataTypes } from "sequelize";
 import db from "../config/Database.js";
 
-// Membuat tabel "user"
 const Note = db.define(
-  "notes", // Nama Tabel
+  "notes",
   {
-    nama: Sequelize.STRING,
-    catatan : Sequelize.STRING
+    judul: DataTypes.STRING,
+    konten: DataTypes.STRING,
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+  },
+  {
+    freezeTableName: true,
   }
 );
 
