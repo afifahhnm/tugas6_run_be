@@ -1,5 +1,4 @@
-GET http://localhost:5000/notes
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsInVzZXJuYW1lIjoiam9obmRvZSIsImVtYWlsIjoiMTIzIiwiaWF0IjoxNzQ3ODE5NjIyLCJleHAiOjE3NDc4MTk2NDJ9.XMyTzs3zQaScQiM-5t_OjAhtFe6k1VFlerO7DeAb9Mg
+GET https://tcc-be-836058602525.asia-southeast2.run.app/notes
 
 ###
 GET http://localhost:5000/notes/1
@@ -7,7 +6,6 @@ GET http://localhost:5000/notes/1
 ###
 POST http://localhost:5000/notes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsInVzZXJuYW1lIjoiam9obmRvZSIsImVtYWlsIjoiMTIzIiwiaWF0IjoxNzQ3ODIwOTQ3LCJleHAiOjE3NDc4MjA5NjJ9.kh4G14BVqZcQAhVZw2l-iic1KVqF36j5vUqft2a84eo
 
 {
     "judul": "John Doe",
@@ -19,8 +17,8 @@ PATCH http://localhost:5000/notes/1
 Content-Type: application/json
 
 {
-    "nama": "M Fikri",
-    "catatan": "mfikri@gmail.com"
+    "judul": "M Fikri",
+    "konten": "mfikri@gmail.com"
 }
 
 ###
