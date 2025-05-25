@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 
 
-app.use(cors({credentials: true, origin: 'https://d-04-450714.uc.r.appspot.com/login.html'}));
+app.use(cors({credentials: true, origin: 'https://d-04-450714.uc.r.appspot.com'}));
 app.use(cookieParser());
 app.use(express.json());
 app.use(NoteRoute);
